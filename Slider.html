@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>My favorite places</h1>
+
+    <div class="carousel-container">
+        <img src="https://media1.thrillophilia.com/filestore/u89sv8ohc0gaa958yh1zh8vuue4l_1619595084_shutterstock_275490581.jpg?w=753&h=450&dpr=2.0" alt="1" class="myslides">
+        <img src="https://wallpapercave.com/wp/wp4946032.jpg" alt="2" class="myslides">
+        <img src="https://www.aesdes.org/wp-content/uploads/2021/01/rain-2000x1194.jpg" alt="3" class="myslides">
+    </div>
+    <script>
+        var index=0;
+        function carousel(){
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i=0; i<x.length; i++){``
+                x[i].style.display = "none";
+            }
+            index++;
+            if (index>x.length){
+                index=1;
+            }
+            x[index-1].style.display="block";
+
+            setTimeout(carousel,2000);
+        }
+        carousel();
+     
+    </script>
+</body>
+</html>
